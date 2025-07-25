@@ -1,4 +1,4 @@
-package org.bullit
+package org.bullit.challenge1581894
 
 enum class Feature {
     BREAKFAST, REFUNDABLE, WIFI

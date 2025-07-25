@@ -1,6 +1,5 @@
-package org.bullit
+package org.bullit.challenge1581894
 
-import org.bullit.Feature.*
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
@@ -14,31 +13,31 @@ class AvailabilityServiceTest {
             176 to listOf(
                 Room(
                     120,
-                    setOf(BREAKFAST, REFUNDABLE),
+                    setOf(Feature.BREAKFAST, Feature.REFUNDABLE),
                     5
                 )
             ),
             177 to listOf(
                 Room(
                     130,
-                    setOf(BREAKFAST),
+                    setOf(Feature.BREAKFAST),
                     1
                 ),
                 Room(
                     140,
-                    setOf(BREAKFAST, REFUNDABLE, WIFI),
+                    setOf(Feature.BREAKFAST, Feature.REFUNDABLE, Feature.WIFI),
                     3
                 )
             ),
             178 to listOf(
                 Room(
                     130,
-                    setOf(BREAKFAST),
+                    setOf(Feature.BREAKFAST),
                     2
                 ),
                 Room(
                     140,
-                    setOf(BREAKFAST, REFUNDABLE, WIFI),
+                    setOf(Feature.BREAKFAST, Feature.REFUNDABLE, Feature.WIFI),
                     10
                 )
             )
@@ -47,19 +46,19 @@ class AvailabilityServiceTest {
         val input = AvailabilityInput(
             176,
             178,
-            setOf(BREAKFAST),
+            setOf(Feature.BREAKFAST),
             1
         )
 
         val expectedOutput = listOf(
             AvailabilityOutput(
                 250,
-                features = setOf(BREAKFAST),
+                features = setOf(Feature.BREAKFAST),
                 1
             ),
             AvailabilityOutput(
                 260,
-                features = setOf(BREAKFAST, REFUNDABLE),
+                features = setOf(Feature.BREAKFAST, Feature.REFUNDABLE),
                 3
             )
         )
@@ -79,19 +78,19 @@ class AvailabilityServiceTest {
             listOf(
                 Room(
                     120,
-                    setOf(BREAKFAST, REFUNDABLE),
+                    setOf(Feature.BREAKFAST, Feature.REFUNDABLE),
                     5
                 )
             ),
             listOf(
                 Room(
                     130,
-                    setOf(BREAKFAST),
+                    setOf(Feature.BREAKFAST),
                     1
                 ),
                 Room(
                     140,
-                    setOf(BREAKFAST, REFUNDABLE, WIFI),
+                    setOf(Feature.BREAKFAST, Feature.REFUNDABLE, Feature.WIFI),
                     3
                 )
             )
@@ -100,12 +99,12 @@ class AvailabilityServiceTest {
         val expectedOutput = listOf(
             AvailabilityOutput(
                 250,
-                setOf(BREAKFAST),
+                setOf(Feature.BREAKFAST),
                 1
             ),
             AvailabilityOutput(
                 260,
-                setOf(BREAKFAST, REFUNDABLE),
+                setOf(Feature.BREAKFAST, Feature.REFUNDABLE),
                 3
             )
         )

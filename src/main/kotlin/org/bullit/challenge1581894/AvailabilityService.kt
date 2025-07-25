@@ -1,4 +1,4 @@
-package org.bullit
+package org.bullit.challenge1581894
 
 class AvailabilityService {
     fun checkAvailability(
